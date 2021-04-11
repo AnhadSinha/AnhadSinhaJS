@@ -1,0 +1,76 @@
+<html>
+    <head>
+        <title>Object Constructors</title>
+    </head>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=New+Tegomin&display=swap');
+        .characters{
+            display: flex;
+        }
+        .card{
+            width: 200px;
+            height: 400px;
+            display: grid;
+            grid-template-rows: 350px 50px;
+            border: 2px solid black;
+        }
+        .image{
+            background-size: cover;
+            background-position: 30% 30%;
+        }
+        .name{
+            background-color: greenyellow;
+            text-align: center;
+            font-family: 'New Tegomin', serif;
+            font-size: 2rem;
+            padding: 7px;
+        }
+ 
+    </style>
+    <body>
+        <div class="characters" id="characters">
+        </div>
+    </body>
+    
+    <script>
+        
+    function character (name,  image, power, health, mobility){
+        this.name = name,
+        this.image = image,
+        this.power = power,
+        this.health = health,
+        this.mobility = mobility;
+    }
+    var pikachu = new character("Pickachu",
+    "https://cdn.ndtv.com/tech/images/gadgets/pikachu_hi_pokemon.jpg",7,3,5);
+    
+    var charmander = new character("Charmander",
+    "https://static.wikia.nocookie.net/sonicpokemon/images/e/e0/Charmander_AG_anime.png",5,4,3);
+ 
+    var characters = [pikachu,charmander];
+     
+     for(c of characters){
+         document.write("here");
+         var card = document.createElement("div");
+         card.className = "card";
+         card.id = c.name;
+ 
+         var image = document.createElement("div");
+         image.className = "image";
+         image.style.backgroundImage = `url(${c.image})`;
+        
+         var cname = document.createElement("div");
+         cname.className = "name";
+         var x = document.createTextNode(c.name);
+         cname.appendChild(x);
+ 
+         document.getElementById("characters").appendChild(card);
+ 
+         var y = document.getElementById(c.name);
+         y.appendChild(image);
+         y.appendChild(cname);
+ 
+     }
+ 
+    </script>
+</html>
