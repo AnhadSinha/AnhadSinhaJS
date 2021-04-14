@@ -1,0 +1,248 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Nokia Corporation</title>
+</head>
+<style type="text/css">
+	@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@500&display=swap');
+	@import url('https://fonts.googleapis.com/css2?family=Cairo&display=swap');
+	@import url('https://fonts.googleapis.com/css2?family=Roboto+Condensed:ital@1&display=swap');
+	body{
+		width: 90%;
+        margin: 0;
+        padding: 0;
+        top: 0;
+        left: 0;
+	}
+
+	.parent{
+        display: grid;
+        grid-template-rows: 50px 300px auto 600px 150px;
+		width: 100vw;
+	}
+	.header{
+		background-image: url(https://www.nokia.com/sites/default/files/styles/nokia_blog_page_image/public/blog/ozo-oppo-find-x2-launch-042920-homepage-desktop.jpg);
+		background-size: cover;
+		background-position: 20% 20%;
+	}
+	.nav{
+		display: flex;
+		justify-content: flex-end;
+		border: 5px solid blue;
+		align-items: center;
+		width: 99.3%;
+	}
+	.nav-items{
+		padding-left: 5px;
+
+	}
+	.nav-image img{
+		width: 10%;
+	}
+	.nav-image{
+		width: 85%
+	}
+	h1{
+		font-family: 'Noto Sans JP', sans-serif;
+		color: white;
+
+	}
+	.heading{
+		width: 450px;
+		padding-top: 20px;
+		padding-left: 200px;
+	}
+	figcaption{
+		padding-top: 10px;
+		padding-bottom: 10px;
+		font-size: 1.9rem;
+		font-family: 'Cairo', sans-serif;
+	}
+	.left-table{
+		width: 500px;
+		padding-left: 100px;
+
+	}
+	.gallery{
+		display: flex;
+		margin-top: 20px;
+	}
+	.right-table{
+		width: 500px;
+		padding-left: 100px;
+	}
+	.scroll{
+		display: flex;
+		background-color: lightgrey;
+		justify-content: center;
+		width: 100vw;
+	}
+	.scroll-img{
+		width: 50%;
+		height: 70%;
+		display: grid;
+		grid-template-rows: 300px 100px 50px;
+		padding-top: 100px;
+
+	}
+	.scroll-image img{
+		width: 78%;
+        height: 100%;
+
+	}
+	.scroll-image{
+		width: 90%;
+		padding: 15px;
+	}
+	.scroll-title{
+		width: 300px;
+		font-family: 'Cairo', sans-serif;
+		margin: 5px;
+	}
+	.scroll-para{
+		padding-left: 5px;
+        width: fit-content;
+		font-family: 'Roboto Condensed', sans-serif;
+		margin: 5px;
+	}
+	.scroll-title a{
+		color: #0065ed;
+		transition: all 0.3s ease-in-out;
+		padding-left : 2px;
+
+	}
+	h3:hover{
+		color: black;
+	}
+	.footer{
+		background-color: #004c9a;
+	}
+	.footer img{
+		width: 150px;
+		height: 60px;
+	}
+	form input[type="text"]{
+		margin: 15px;
+	}
+	label{
+		color: white;
+	}
+	#solution{
+		color: white;
+		margin-left: 5px;
+	}
+	
+
+</style>
+<body>
+	<div class="parent">
+		<div class="nav">
+			<div class="nav-image">
+				<img src="https://download.logo.wine/logo/Nokia/Nokia-Logo.wine.png">
+			</div>
+			<div class="nav-items">
+				<h5>Home</h5>
+			</div>
+			<div class="nav-items">
+				<h5>Contact</h5>
+			</div>
+			<div class="nav-items">
+				<h5>About us</h5>
+			</div>
+		</div>
+		<div class="header">
+			<div class="heading">
+			<h1>Bringing together the world's intelligence</h1>
+			</div>
+		</div>
+		<div class="gallery">
+			<div class="left-table">
+				<div class="image 1">
+					<a href="https://www.nokia.com/networks/csp/knownow-report/"target="_blank"><img src="https://www.nokia.com/sites/default/files/styles/scalecrop_524_x_800_more_content_tall/public/2021-01/Trendspotting_WebsiteBanner_1048x1600_1.jpg?h=6562457c">
+					<figcaption>Create positive business momentums in 2021</figcaption></a>
+				</div>
+				<div class="image 2">
+					<a href="https://www.nokia.com/networks/dc-fabric/"target="_blank"><img src="https://www.nokia.com/sites/default/files/styles/scalecrop_524_x_294_more_content_wide/public/2021-01/datacenter.jpg?h=d1cb525d">
+					<figcaption>Open data center fabrics</figcaption></a>
+				</div>
+			</div>
+			<div class="right-table">
+				<div class="image 1">
+					<a href="https://www.nokia.com/about-us/investors/results-reports/"target="_blank"><img src="https://www.nokia.com/sites/default/files/styles/scalecrop_524_x_294_more_content_wide/public/2021-02/Nokia-building.jpg?h=454d3eca">
+					<figcaption>Read more about our Q4 2020 earnings</figcaption></a>
+				</div>
+				<div class="image 2">
+					<a href="https://www.nokia.com/networks/csp/unlock-business-potential/digital-transformation/take-control/"target="_blank"><img src="https://www.nokia.com/sites/default/files/styles/scalecrop_524_x_524_more_content_sq/public/2021-01/Nokia_1008x564_1.jpg?h=21023f35">
+					<figcaption>Learn how to take control of your digital transformation</figcaption></a>
+				</div>
+			</div>
+		</div>
+		<div class="scroll">
+			<div class="scroll-img">
+				<div class="scroll-image">
+				<a href="https://www.nokia.com/networks/5g/"target="_blank"><img src="https://www.nokia.com/sites/default/files/styles/scale_720_square/public/2021-01/5g%20big_0.jpg?h=2d935a5a%27">
+				</a>
+				</div>
+				<div class="scroll-title">
+					<a href="https://www.nokia.com/networks/5g/"target="_blank"><h3>Deliver Extraordinary 5G</h3></a>
+				</div>
+				<div class="scroll-para">
+					<p>See how you can create amazing 5G experiences with Nokia's powerful 5G networks</p>
+				</div>
+			</div>
+			<div class="scroll-img">
+				<div class="scroll-image">
+					<a href="https://www.nokia.com/networks/go-allwhere/private-wireless/"target="_blank"><img src="https://www.nokia.com/sites/default/files/styles/scalecrop_362x181_new_insights_desktop/public/2021-01/Nokia_PW_942x381_1.jpg?h=7fa694dd"></a>
+				</div>
+				<div class="scroll-title">
+					<a href="https://www.nokia.com/networks/go-allwhere/private-wireless/"target="_blank"><h3>Your pathway to industry 4.0</h3></a>
+				</div>
+				<div class="scroll-para">
+					<p>Learn how to transfrom mission-critial to mission impossible networks.</p>
+				</div>
+			</div>
+			<div class="scroll-img">
+				<div class="scroll-image">
+					<a href="https://www.nokia.com/blog/what-can-200-software-engineers-in-lockdown-accomplish-in-nine-months/"target="_blank"><img src="https://www.nokia.com/sites/default/files/styles/scale_720_square/public/2021-02/Nokia-engineer.jpg?h=7dba202f"></a>
+				</div>
+				<div class="scroll-title">
+					<a href="https://www.nokia.com/blog/what-can-200-software-engineers-in-lockdown-accomplish-in-nine-months/"target="_blank"><h3>Our people</h3></a>
+				</div>
+				<div class="scroll-para">
+					<p>Here is what 200 software engineers in lockdown accomplish in nine months.</p>
+				</div>
+			</div>
+		</div>
+		<div class="footer">
+		    <img src="https://th.bing.com/th/id/R4937617e06c81ac69e0867772aa9cdb4?rik=NRO5NU0aeugisA&riu=http%3a%2f%2f1000logos.net%2fwp-content%2fuploads%2f2017%2f03%2fColor-Nokia-Logo.jpg&ehk=sNyg7n4LtaGuWImTq7CJBOP4r7whqfk6rz9uNSuhW90%3d&risl=&pid=ImgRaw">
+			<form action="#">
+				<input type="text" name="fullname"id="fullName"placeholder="Enter full name">
+				<input type="email" name="emailid"id="email"placeholder="Email-Id">
+				<label for="radio">Subscribe For Updates</label>
+				<input type="radio" name="subscribe" value="yes"id="radioyes">
+				<label for="yes">Yes</label>
+				<input type="radio" name="subscribe" value="no"id="radiono">
+				<label for="yes">No</label>
+				<button onclick="SubscriptionPage()">Submit</button>
+			</form>
+			<p id="solution"></p>
+
+		</div>
+	</div>
+</body>
+    <script>
+		function SubscriptionPage(){
+		var fullname = document.getElementById("fullName").value;
+		var email = document.getElementById("email").value;
+		
+		if(document.getElementById('radioyes').checked)
+		{    
+      		document.getElementById("solution").innerText = (`${fullname} has Subscribed to Nokia and will get updates on ${email}.Thank you.`);    
+		}
+		else{
+			document.getElementById("solution").innerText = (`You are not Subscribed. If you want to Subscribe then please click yes.`);
+		}
+
+		}
+	</script>
+</html>
