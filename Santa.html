@@ -1,0 +1,137 @@
+<html>
+
+<head>
+    <title>Send to Santa</title>
+</head>
+<style>
+    body {
+        background-image: url("https://blog.sciencemuseum.org.uk/wp-content/uploads/2017/12/moon-3021005_1920.jpg");
+        background-size: cover;
+        background-position: center center;
+        background-repeat: no-repeat;
+        display: flex;
+    }
+
+    .form-holder {
+        background-position: center center;
+        background-color: rgba(0, 0, 0, 0.459);
+        width: 427px;
+        height: 600px;
+        text-align: center;
+        margin-left: 400px;
+        padding: 100px;
+        margin-right: 400px;
+        justify-content: center;
+        margin-top: 400px;
+        margin-bottom: 350px;
+
+    }
+
+    h1 {
+        color: white;
+
+    }
+
+    form {
+        color: white;
+        justify-content: flex-start;
+        text-align: start;
+    }
+    button{
+        text-align: start;
+    }
+    p{
+        color: white;
+    }
+</style>
+
+<body>
+    <div class="form-holder">
+        <h1>Send to Santa what you want for Christmas</h1>
+        <form>
+            <label>Full name:</label>
+            <input type="text" id="fullName" placeholder="John Barker">
+            <br>
+            <br>
+            <label>Address:</label>
+            <input type="text" id="address" placeholder="Uk">
+            <br>
+            <br>
+            <label>Age:</label>
+            <input type="number" id="age" placeholder="9">
+            <br>
+            <br>
+            <label>How nice were you this year?</label>
+            <br>
+            <label>Kind</label>
+            <input type="radio" value="Kind" id="kind" name="rating">
+            <label>Average</label>
+            <input type="radio" value="Average" id="moderate" name="rating">
+            <label>Naughty</label>
+            <input type="radio" value="Naughty" id="bad" name="rating">
+            <h4>What Present do you want for this christmas?</h4>
+            <input type="checkbox" id="present1" name="presents" value="Uno">
+            <label>Uno!</label>
+            <br>
+            <input type="checkbox" id="present2" name="presents" value="Legos">
+            <label>Legos</label>
+            <br>
+            <input type="checkbox" id="present3" name="presents" value="Laptop">
+            <label>LapTop/Desktop</label>
+            <br>
+            <input type="checkbox" id="present4" name="presents" value="GoldBar">
+            <label>Golden Bar</label>
+            <br>
+            <label>Choose the color of the gift wrapping:</label>
+            <input type="color" id="color">
+            <br>
+            <br>
+            
+            
+            
+
+
+        </form>
+        <button onclick="doJS()">Send to Santa</button>
+        <p id="solution"></p>
+    </div>
+
+</body>
+<script type="text/javascript" src="ntc.js"></script>
+<script>
+    function doJS(){
+        name = document.getElementById("fullName").value;
+        color = document.getElementById("color").value;
+        var colorValue = ntc.name(color)
+        var ratings = document.getElementsByName("rating");
+        var ratingsValue
+        for (var i = 0; i < ratings.length; i++){
+            if(ratings[i].checked){
+                ratingsValue = ratings[i].value;
+                break;
+            }
+        }
+        var presents = document.getElementsByName("presents");
+        var presentsValue
+        for (var i = 0; i < presents.length; i++){
+            if(presents[i].checked){
+             presentsValue = presents[i].value;
+             break;
+            }
+
+        }
+        if(ratingsValue == "Kind"||ratingsValue == "Average"){
+            document.getElementById("solution").innerHTML = `Hello ${name} you have been  ${ratingsValue} this year. Your gift of ${presentsValue} has been approved. Your gift will be wrapped in ${colorValue[1]}.`;
+        }     
+        else if(ratingsValue == "Naughty"){
+            document.getElementById("solution").innerHTML = `Hello ${name} you have been ${ratingsValue} this year. Your gift will not get accepted by Santa and you will receive coal.`;
+
+        }       
+        
+            
+        
+      
+    }
+</script>
+
+</html>
