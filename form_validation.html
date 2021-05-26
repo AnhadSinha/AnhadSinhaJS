@@ -1,0 +1,141 @@
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Form Validation</title>
+
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Newsreader&display=swap');
+        body {
+            margin: 0;
+
+        }
+        .body.error {
+            background-color:red;
+        }
+        .body.success{
+            background-color: green;
+        }
+
+
+        .container {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+            height: 100vh;
+
+        }
+
+        .form-control {
+            padding: 5% 2.5%;
+            background-color: white;
+            box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.2);
+        }
+
+        .form-control h1 {
+            text-align: center;
+        }
+
+        .form-control form input,
+        .form-control form button {
+            display: block;
+            width: 20vw;
+            padding: 5px 10px;
+            margin: 5px;
+        }
+
+        .form-control form button {
+            width: 21.75vw;
+        }
+
+        button {
+            background-color: cadetblue;
+            color: white;
+            border: 2px solid rgb(64, 122, 124);
+            font-weight: bolder;
+            text-transform: uppercase;
+        }
+
+        .form-control p {
+            text-align: center;
+        
+        }
+        .error {
+            font-family: 'Newsreader', serif;
+
+        }
+    </style>
+</head>
+
+<body id="body" class="body">
+    <div class="container">
+        <div class="form-control">
+
+            <h1>Register With Us</h1>
+
+            <form id="form">
+                <input type="text" name="firstname" class="form-input" id="firstname" placeholder="Enter Firstname">
+                <input type="text" name="lastname" class="form-input" id="lastname" placeholder="Enter Lastname">
+
+                <input type="text" name="email" class="form-input" id="username" placeholder="Enter Email Address">
+
+                <input type="submit" id="register" value="Register">
+            </form>
+
+            <p id="error_msg" class="error"></p>
+
+        </div>
+    </div>
+
+    <script>
+        var firstName = document.getElementById("firstname")
+        var lastName = document.getElementById("lastname")
+        var emailid = document.getElementById("username")
+        var error_msg = document.getElementById("error_msg")
+        var register = document.getElementById("register")
+        var body = document.getElementById("body")
+        let success = false;
+
+        register.addEventListener("click", function(e)
+        {
+            e.preventDefault();
+            error_msg.innerHTML = "";
+            checkForErors(firstName,"Firstname is empty");
+            checkForErors(lastName,"Lastname is empty");
+            checkForErors(emailid,"Email is empty");
+            if (firstName.value == lastName.value){
+                body.className = "body error";
+                error_msg.innerHTML += "Firstname and lastname should not match <br>";
+            }
+            if(error_msg.innerHTML == ""){
+                body.className = "body success";
+                error_msg.innerHTML = "Thank you for signing in with us!";
+
+            }
+            else{
+                body.className = "body error";
+            }
+        }
+        )
+
+        function checkForErors(input,text) {
+
+            if (input.value.trim() === "") {
+                error_msg.innerHTML += text + "<br>";
+                body.className = "body error";
+            }
+            
+               
+            
+
+
+
+            }
+    </script>
+</body>
+
+
+</html>
