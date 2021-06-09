@@ -1,0 +1,31 @@
+@import url('https://fonts.googleapis.com/css2?family=Merriweather:wght@300&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Cairo:wght@300&display=swap');
+body{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-image: url("https://mybayutcdn.bayut.com/mybayut/wp-content/uploads/UAE-flag-history-A-06-08-1-1024x640.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+
+}
+.container{
+    width: 600;
+    height: 400;
+    background-color: aliceblue;
+    box-shadow: -2px 2px 10px  black ;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+p{
+    font-family: 'Merriweather', serif;
+    font-size: 35px;
+    text-align: center;
+
+}
+h1{
+    font-family: 'Cairo', sans-serif;
+    text-align: center;
+}
